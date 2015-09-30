@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="navbar">
+    {{#link-to 'index' class="navbar-brand"}}Fake Yelp{{/link-to}}
+  </div>
+  <ul class="nav navbar-nav">
+    {{#if city}}
+      <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+    {{/if}}
+      <li>{{#link-to 'category' category.id}}{{category.type}}{{/link-to}}</li>
+    {{#if category}}
+
+    {{/if}}
+
+  </ul>
+
+</div>
+
+{{yield}}
