@@ -1,11 +1,11 @@
 {{model.name}}
 <br>
 <br>
-{{model.categories.type}}
-<!-- <ul>
-  {{#each model.categories as |category|}}
-    <li>{{category.type}}</li>
-  {{/each}}
-</ul> -->
+<ul>
+{{#each model.categories as |category|}}
+ <li>{{#link-to 'category' category.id}}{{category.type}}{{/link-to}}</li>
+{{/each}}
+</ul>
 
+{{new-business saveBusiness='saveBusiness' city=model}}
 {{outlet}}

@@ -8,8 +8,9 @@ export default DS.Model.extend({
    contact: DS.attr(),
    hours: DS.attr(),
    price: DS.attr(),
+   image: DS.attr(),
    city: DS.belongsTo('city', {async: true}),
    review: DS.hasMany('reviews', {async: true}),
-   category: DS.hasMany('categories', {async: true})
+   category: DS.belongsTo('category', {async: true})
 
 });

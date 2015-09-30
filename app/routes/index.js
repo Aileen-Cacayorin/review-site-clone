@@ -26,8 +26,6 @@ export default Ember.Route.extend({
       var newCategory16 = this.store.createRecord('category', {type: 'Public Services and Government'});
       var newCategory17 = this.store.createRecord('category', {type: 'Religious Organizations'});
       var newCategory18 = this.store.createRecord('category', {type: 'Real Estate'});
-
-
         newCity.save().then(function() {
           newCategory1.save();
           newCategory2.save();

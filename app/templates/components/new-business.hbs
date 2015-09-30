@@ -1,1 +1,53 @@
-{{yield}}
+
+
+{{#if addBusinessForm}}
+<h1>New Business</h1>
+{{city.name}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name" id="business-name">Business Name</label>
+        {{input value=name id="name"}}
+      </div>
+
+      <div class="form-group">
+        <label for="address" id="business-address">Address</label>
+        {{input value=address id="address"}}
+      </div>
+
+      <div class="form-group">
+        <label for="contact" id="business-contact">Contact Info</label>
+        {{input value=contact id="contact"}}
+      </div>
+
+      <div class="form-group">
+        <label for="hours" id="business-hours">Hours</label>
+        {{input value=hours id="hours"}}
+      </div>
+
+      <div class="form-group">
+        <label for="price" id="business-price">Price</label>
+        {{input value=price id="price"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image" id="image">Image</label>
+        {{input value=image id="image"}}
+      </div>
+
+      <label for="category">Choose a listing category:</label>
+      {{#x-select value=category id="select-category"}}
+        {{#each city.categories as |category|}}
+          {{#x-option value=category}}
+            {{category.type}}
+          {{/x-option}}
+        {{/each}}
+      {{/x-select}}
+
+
+      <button {{action 'saveBusiness' city}}>Save Business</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'showBusinessForm'}}>New Business</button>
+{{/if}}

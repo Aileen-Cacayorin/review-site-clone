@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('city', {path: 'city/:city_id'});
   this.route('business');
   this.route('review');
-  this.route('category');
+  this.route('category', {path: 'category/:category_id'});
 });
 
 export default Router;
