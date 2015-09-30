@@ -2,5 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   type: DS.attr(),
-  business: DS.hasMany('businesses')
+  business: DS.hasMany('businesses'),
+  city: DS.belongsTo('city')
 });
