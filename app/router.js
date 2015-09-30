@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('city');
+  this.route('business');
+  this.route('review');
+  this.route('category');
 });
 
 export default Router;
