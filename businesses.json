@@ -1,0 +1,45 @@
+{
+  "businesses": [
+    { "name": "Hot Pots",
+      "address": "400 NE Alberta Street, Portland, OR",
+      "rating": 5,
+      "contact": "1234567890",
+      "hours": "11am - 10pm",
+      "price": "$$"
+    },
+    { "name": "Sizzle Pie",
+      "address": "445 NE 10th Street, Portland, OR",
+      "rating": 3,
+      "contact": "555555555",
+      "hours": "11am - 2am",
+      "price": "$$$$"
+    }
+  ],
+
+  "reviews": [
+    { "author": "Roger",
+      "date": "2/3/2015",
+      "rating": 4,
+      "body": "Great restaurant",
+      "visit-again": "yes"
+    },
+    { "author": "Jack",
+    "date": "11/13/2009",
+    "rating": 2,
+    "body": "Terrible restaurant",
+    "visit-again": "no"
+    }
+  ],
+
+  "categories": [
+    { "type": "Sushi"},
+    {"type": "Pizza"},
+    {"type": "Bar"}
+  ],
+
+  "cities": [
+    { "name": "Portland"},
+    {"name": "Austin"},
+    {"name": "Chicago"}
+  ]
+}

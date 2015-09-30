@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('city');
+  this.route('city', {path: 'city/:city_id'});
   this.route('business');
   this.route('review');
   this.route('category');
