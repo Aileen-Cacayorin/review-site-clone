@@ -1,6 +1,11 @@
 {{nav-links category=model.category city=model.category.city}}
 
-{{business-tile business=model}}
-
-
 {{new-review saveReview="saveReview" business=model}}
+
+<ul>
+  {{#each model.review as |review|}}
+    {{review-tile review=review}}
+  {{/each}}
+</ul>
+
+{{business-tile business=model}}

@@ -7,4 +7,10 @@
 {{business.price}}
 <img src={{business.image}}>
 
+<ul>
+  {{#each business.reviews as |review|}}
+    {{review.body}}
+  {{/each}}
+</ul>
+
 {{google-map business=business}}
