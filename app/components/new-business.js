@@ -20,6 +20,8 @@ export default Ember.Component.extend({
         category: this.get('category'),
         image: this.get('image'),
         city: this.get('city'),
+        latitude: this.get('latitude'),
+        longitude: this.get('longitude'),
         rating: 5,
         location: 1234
       };
