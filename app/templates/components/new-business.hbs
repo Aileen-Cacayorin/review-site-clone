@@ -37,6 +37,7 @@
 
       <label for="category">Choose a listing category:</label>
       {{#x-select value=category id="select-category"}}
+        <option disabled="disabled" selected="selected">Choose Category</option>
         {{#each city.categories as |category|}}
           {{#x-option value=category}}
             {{category.type}}
