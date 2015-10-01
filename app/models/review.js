@@ -6,5 +6,5 @@ export default DS.Model.extend({
   rating: DS.attr(),
   body: DS.attr(),
   repeat: DS.attr(),
-  business: DS.belongsTo('business')
+  business: DS.belongsTo('business', {async: true})
 });
