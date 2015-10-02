@@ -14,30 +14,14 @@ export default Ember.Route.extend({
         return business.save();
       });
       this.transitionTo('business');
+    },
+
+    deleteBusiness(model) {
+      model.get('review').forEach(function(review) {
+        review.destroyRecord();
+      });
+      model.destroyRecord();
+      this.transitionTo('category', model.category.category_id);
     }
   }
 });
-
-
-
-
-
-averageReview: Ember.computed('business.@each.review.rating', function() {
-  var sum=0;
-  var numReviews = this.get('business').get('reviews').get('length');
-  for(var i=-0; i<numReviews; i++) {
-    var rating = this.get('business').objectAt(i).get('rating');
-    ratingAverage += rating; //need to divide by length of loop iterations
-  }
-  return ratingAverage;
-})
-
-
-
-// averageWaitTime: Ember.computed('tickets.@each.waitTime', function() {
-//   var sum=0;
-//   for(var i=-0; i<this.get('tickets').get('length'); i++) {
-//     var waitTime = this.get('tickets').objectAt(i).get('waitTime');
-//     sum += waitTime;
-//   return sum;
-// })

@@ -1,5 +1,8 @@
 {{nav-links category=model.category city=model.category.city}}
 
+
+<button {{action 'deleteBusiness' model}}>Delete business</button>
+
 {{new-review saveReview="saveReview" business=model}}
 
 <ul>
