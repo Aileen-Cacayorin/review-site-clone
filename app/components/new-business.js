@@ -10,7 +10,7 @@ export default Ember.Component.extend({
 
     saveBusiness() {
 
-
+      debugger;
       var params = {
         name: this.get('name'),
         address: this.get('address'),
@@ -25,7 +25,6 @@ export default Ember.Component.extend({
         rating: 5,
         location: 1234
       };
-      debugger;
       this.set('addBusinessForm', false);
       this.sendAction('saveBusiness', params);
       this.set('address', "");

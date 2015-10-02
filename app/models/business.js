@@ -4,7 +4,6 @@ export default DS.Model.extend({
    name: DS.attr(),
    address: DS.attr(),
    location: DS.attr(),
-   rating: DS.attr(),
    contact: DS.attr(),
    hours: DS.attr(),
    price: DS.attr(),
